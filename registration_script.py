@@ -10,9 +10,14 @@ registration_url = 'https://reachoutworld.org/group/udugroup'
 
 for person in data:
     session = requests.Session()
-    response = session.get(registration_url)
+    try:
+        response = session.get(registration_url)
+        response.raise_for_status()  # Raises an exception for 4xx and 5xx status codes
+    except requests.exceptions.RequestException as e:
+        print(f"Error during GET request: {e}")
+        session.close()
+        continue
     soup = BeautifulSoup(response.text, 'html.parser')
-
     csrf_token_input = soup.find("input", {"name": "csrf_token"})
     if csrf_token_input:
         csrf_token = csrf_token_input.get("value")
@@ -20,6 +25,12 @@ for person in data:
     else:
         session.close()
         continue
+        if response.status_code == 200:
+            logging.info(f"Registered {person['fullnames']} successfully!")
+        else:
+            logging.error(f"Registration failed for {person['fullnames']}")
+
+        session.close()
     fullnames_input = soup.find('input', {'name': 'fullnames'})
     email_input = soup.find('input', {'name': 'email'})
     zone_input = soup.find('input', {'name': 'zone'})
