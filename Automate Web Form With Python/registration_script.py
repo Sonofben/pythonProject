@@ -1,12 +1,13 @@
+import logging
 import requests
 from bs4 import BeautifulSoup
 import json
 
 # Load data from JSON file
-with open("registration_data.json", 'r') as json_file:
+with open("data.json", 'r') as json_file:
     data = json.load(json_file)
 
-registration_url = 'https://reachoutworld.org/group/udugroup'
+registration_url = 'https://reachoutworld.org/'
 
 for person in data:
     session = requests.Session()
@@ -25,12 +26,7 @@ for person in data:
     else:
         session.close()
         continue
-        if response.status_code == 200:
-            logging.info(f"Registered {person['fullnames']} successfully!")
-        else:
-            logging.error(f"Registration failed for {person['fullnames']}")
 
-        session.close()
     fullnames_input = soup.find('input', {'name': 'fullnames'})
     email_input = soup.find('input', {'name': 'email'})
     zone_input = soup.find('input', {'name': 'zone'})
@@ -52,8 +48,8 @@ for person in data:
     response = session.post(registration_url, data=form_data)
 
     if response.status_code == 200:
-        print(f"Registered {person['fullnames']} successfully!")
+        logging.info(f"Registered {person['fullnames']} successfully!")
     else:
-        print(f"Registration failed for {person['fullnames']}")
+        logging.error(f"Registration failed for {person['fullnames']}")
 
     session.close()

@@ -7,6 +7,8 @@ import json
 with open("Emeis2Learndata.json", 'r') as json_file:
     data = json.load(json_file)
 
+
+
 registration_url: str = 'https://emeis2learn.newzenler.com/'
 
 for person in data:
