@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 import json
 
 # Load data from JSON file
-with open("data.json", 'r') as json_file:
+with open("test1000c.json", 'r') as json_file:
     data = json.load(json_file)
 
-registration_url = 'https://reachoutworld.org/'
+registration_url = 'http://reachoutworld.org/register'
 
 for person in data:
     session = requests.Session()

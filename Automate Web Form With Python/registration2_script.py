@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def register_on_website(email, fullname, zone, group):
     base_url = "http://reachoutworld.org/group/udugroup"
-    registration_url = f"{http://reachoutworld.org}http://reachoutworld.org/register"
+    registration_url = f"{ http://reachoutworld.org}http://reachoutworld.org/register"
 
     responses = requests.get(registration_url)
     if responses.status_code != 200:
