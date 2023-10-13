@@ -1,44 +1,44 @@
 [
   {
     "email": "jamedowry232@gmail.com",
-    "fullname": "jame dowry",
-    "username": "jamedowry",
-    "password": "james101@dowry"
+    "full_name": "jame dowry",
+    "country": "Nigeria",
+    "state": "Abuja"
   },
   {
     "email": "barbaramarucs@gmail.com",
-    "fullname": "marcus barbara",
-    "username": "barbmarcus11",
-    "password": "mrsmarcus@2012"
+    "full_name": "marcus barbara",
+    "country": "Nigeria",
+    "state": "Kano"
   },
   {
     "email": "josephbenson11@gmail.com",
-    "fullname": "joseph benson",
-    "username": "bigjoe047",
-    "password": "joseph@JP11"
+    "full_name": "joseph benson",
+    "country": "Nigeria",
+    "state": "Oyo"
   },
   {
     "email": "eliteben12@gmail.com",
-    "fullname": "erick benson",
-    "username": "eliteben",
-    "password": "james121@dowry"
+    "full_name": "erick benson",
+    "country": "Nigeria",
+    "state": "Ogun"
   },
   {
     "email": "michealsala12@gmail.com",
-    "fullname": "micheal salako",
-    "username": "salakomj",
-    "password": "jamesmj23@dowry"
+    "full_name": "micheal salako",
+    "country": "Nigeria",
+    "state": "River"
   },
   {
     "email": "sledgeface@gmail.com",
-    "fullname": "anthony sledge",
-    "username": "scarfacesledge",
-    "password": "scarface007@dowry"
+    "full_name": "anthony sledge",
+    "country": "Nigeria",
+    "state": "Abia"
   },
   {
     "email": "delcanrice@gmail.com",
-    "fullname": "declane rice",
-    "username": "ododumodorice",
-    "password": "james121@rice"
+    "full_name": "declane rice",
+    "country": "Nigeria",
+    "state": "Lagos"
   }
 ]
